@@ -2,20 +2,17 @@ package br.com.commandline;
 
 import br.com.commandline.domain.Question;
 import br.com.commandline.domain.Topic;
-import br.com.commandline.domain.TopicList;
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.*;
+import java.lang.reflect.Type;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * Ref GSON:
- * https://github.com/google/gson/blob/master/UserGuide.md
- */
 public class CommandlineInglesApplication  {
 
     public static final String ANSI_RESET = "\u001B[0m";
@@ -34,7 +31,7 @@ public class CommandlineInglesApplication  {
 
     static boolean finalTopic = false;
 
-    static TopicList topicList;
+    static List<Topic> topics;
     static Topic topic;
 
     static List<Question> listQuestionsTemp = new ArrayList<>();
@@ -72,7 +69,9 @@ public class CommandlineInglesApplication  {
         close(input);
         int count = 1;
         while (count < qtdeRetry) {
-            if (input.equalsIgnoreCase(question.getAnswer().trim())) break;
+            String temp = input;
+            String answer = question.getAnswers().stream().filter(p -> temp.equalsIgnoreCase(p.trim())).findAny().orElse("");
+            if (!"".equals(answer)) break;
             System.out.println(ANSI_RED + "Error -> Retry " + count + " of " + qtdeRetry);
             input = scanner.nextLine().trim();
             close(input);
@@ -80,7 +79,7 @@ public class CommandlineInglesApplication  {
             if (count == qtdeRetry) {
                 System.out.println(ANSI_RED + "Error -> Retry " + count + " of " + qtdeRetry);
                 System.out.println();
-                System.out.println(ANSI_RED + "Answer: " + question.getAnswer());
+                System.out.println(ANSI_RED + "Answer: " + question.getAnswers());
             }
         }
         command();
@@ -90,13 +89,13 @@ public class CommandlineInglesApplication  {
         listQuestionsTemp.clear();
         finalTopic = false;
         System.out.println(ANSI_RED + "Selecione o numero de um Topico!");
-        for (int i = 0; i < topicList.getTopics().size(); i++) {
-            System.out.println(ANSI_GREEN + "[" + i + "] " + topicList.getTopics().get(i).getTopic());
+        for (int i = 0; i < topics.size(); i++) {
+            System.out.println(ANSI_GREEN + "[" + i + "] " + topics.get(i).getTopic());
         }
 
         String input = new Scanner(System.in).nextLine();
         close(input);
-        topic = topicList.getTopics().get(Integer.valueOf(input));
+        topic = topics.get(Integer.valueOf(input));
 
         System.out.println("Topico Selecionado -> " + topic.getTopic());
         System.out.println(ANSI_RED + "##############################################################");
@@ -115,7 +114,8 @@ public class CommandlineInglesApplication  {
         Gson gson = new Gson();
         InputStream is = CommandlineInglesApplication.class.getResourceAsStream("/question.json");
         BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-        topicList = gson.fromJson(br, TopicList.class);
+        Type listType = new TypeToken<ArrayList<Topic>>(){}.getType(); //Usado para fazer o parser da lista
+        topics = gson.fromJson(br, listType);
         menuTopics();
     }
 

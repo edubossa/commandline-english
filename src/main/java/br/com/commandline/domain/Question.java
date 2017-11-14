@@ -1,12 +1,14 @@
 package br.com.commandline.domain;
 
+import java.util.List;
+
 /**
  * Created by wallace on 06/04/17.
  */
 public class Question {
 
     private String question;
-    private String answer;
+    private List<String> answers;
 
     public String getQuestion() {
         return question;
@@ -16,19 +18,19 @@ public class Question {
         this.question = question;
     }
 
-    public String getAnswer() {
-        return answer;
+    public List<String> getAnswers() {
+        return answers;
     }
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setAnswers(List<String> answers) {
+        this.answers = answers;
     }
 
     @Override
     public String toString() {
         return "Question{" +
                 "question='" + question + '\'' +
-                ", answer='" + answer + '\'' +
+                ", answers=" + answers +
                 '}';
     }
 }
