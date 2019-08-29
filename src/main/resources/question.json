@@ -42,6 +42,47 @@
   },
 
   {
+    "topic" : "IRREGULAR VERBS / PART 02",
+    "list" : [
+      { "question" : "make", "answers" : ["made"] },
+      { "question" : "meet", "answers" : ["met"] },
+      { "question" : "pay", "answers" : ["paid"] },
+      { "question" : "put", "answers" : ["put"] },
+      { "question" : "read", "answers" : ["read"] },
+      { "question" : "ride", "answers" : ["rode"] },
+      { "question" : "ring", "answers" : ["rang"] },
+      { "question" : "rise", "answers" : ["rose"] },
+      { "question" : "run", "answers" : ["ran"] },
+      { "question" : "say", "answers" : ["said"] },
+      { "question" : "see", "answers" : ["saw"] },
+      { "question" : "sell", "answers" : ["sold"] },
+      { "question" : "send", "answers" : ["sent"] },
+      { "question" : "set", "answers" : ["set"] },
+      { "question" : "shake", "answers" : ["shook"] },
+      { "question" : "show", "answers" : ["showed"] },
+      { "question" : "shut", "answers" : ["shut"] },
+      { "question" : "sing", "answers" : ["sang"] },
+      { "question" : "sit", "answers" : ["sat"] },
+      { "question" : "sleep", "answers" : ["slept"] },
+      { "question" : "spend", "answers" : ["spent"] },
+      { "question" : "stand", "answers" : ["stood"] },
+      { "question" : "steal", "answers" : ["stole"] },
+      { "question" : "stick", "answers" : ["stuck"] },
+      { "question" : "swim", "answers" : ["swam"] },
+      { "question" : "take", "answers" : ["took"] },
+      { "question" : "teach", "answers" : ["taught"] },
+      { "question" : "tell", "answers" : ["told"] },
+      { "question" : "think", "answers" : ["thought"] },
+      { "question" : "throw", "answers" : ["threw"] },
+      { "question" : "understand", "answers" : ["understood"] },
+      { "question" : "wake", "answers" : ["woke"] },
+      { "question" : "wear", "answers" : ["wore"] },
+      { "question" : "win", "answers" : ["won"] },
+      { "question" : "write", "answers" : ["wrote"] }
+    ]
+  },
+
+  {
     "topic" : "Verbos",
     "list" : [
       { "question" : "Questao 01", "answers" : ["xxxx", "xxxxx", "xxxxxx"] },
