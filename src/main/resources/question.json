@@ -83,7 +83,7 @@
   },
 
   {
-    "topic" : "Verbos",
+    "topic" : "VERBS",
     "list" : [
       { "question" : "Questao 01", "answers" : ["xxxx", "xxxxx", "xxxxxx"] },
       { "question" : "Questao 02", "answers" : ["xxxx", "xxxxx", "xxxxxx", "xxxxxxx"] }

@@ -10,6 +10,14 @@ public class Topic {
     private String topic;
     private List<Question> list;
 
+    public Topic() {
+    }
+
+    public Topic(String topic, List<Question> list) {
+        this.topic = topic;
+        this.list = list;
+    }
+
     public String getTopic() {
         return topic;
     }

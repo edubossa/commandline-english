@@ -35,6 +35,7 @@ public class CommandlineInglesApplication  {
     static Topic topic;
 
     static List<Question> listQuestionsTemp = new ArrayList<>();
+    static List<Question> listQuestionsError = new ArrayList<>();
 
     static Question getQuestion() {
         finalTopic = false;
@@ -80,6 +81,7 @@ public class CommandlineInglesApplication  {
                 System.out.println(ANSI_RED + "Error -> Retry " + count + " of " + qtdeRetry);
                 System.out.println();
                 System.out.println(ANSI_RED + "Answer: " + question.getAnswers());
+                listQuestionsError.add(question);
             }
         }
         command();
@@ -88,6 +90,11 @@ public class CommandlineInglesApplication  {
     static void menuTopics()  {
         listQuestionsTemp.clear();
         finalTopic = false;
+        if (!listQuestionsError.isEmpty()) {
+            Topic topic = new Topic("RETRY TO THE WRONG QUESTIONS!", new ArrayList<>(listQuestionsError));
+            topics.add(topic);
+            listQuestionsError.clear();
+        }
         System.out.println(ANSI_RED + "Selecione o numero de um Topico!");
         for (int i = 0; i < topics.size(); i++) {
             System.out.println(ANSI_GREEN + "[" + i + "] " + topics.get(i).getTopic());
