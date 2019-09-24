@@ -1,43 +1,87 @@
 [
+
   {
-    "topic" : "IRREGULAR VERBS / PART 01",
+    "topic" : "IRREGULAR VERBS / PARTICIPLE PART 01",
     "list" : [
-      { "question" : "be", "answers" : ["was", "were"] },
-      { "question" : "become", "answers" : ["became"] },
-      { "question" : "begin", "answers" : ["began"] },
-      { "question" : "bite", "answers" : ["bit"] },
-      { "question" : "break", "answers" : ["broke"] },
+      { "question" : "be", "answers" : ["been"] },
+      { "question" : "become", "answers" : ["become"] },
+      { "question" : "begin", "answers" : ["begun"] },
+      { "question" : "bite", "answers" : ["bitten"] },
+      { "question" : "break", "answers" : ["broken"] },
       { "question" : "bring", "answers" : ["brought"] },
       { "question" : "build", "answers" : ["built"] },
       { "question" : "buy", "answers" : ["bought"] },
-      { "question" : "choose", "answers" : ["chose"] },
-      { "question" : "come", "answers" : ["came"] },
+      { "question" : "choose", "answers" : ["chosen"] },
+      { "question" : "come", "answers" : ["come"] },
       { "question" : "cost", "answers" : ["cost"] },
-      { "question" : "do", "answers" : ["did"] },
+      { "question" : "do", "answers" : ["done"] },
       { "question" : "dream", "answers" : ["dreamed"] },
-      { "question" : "drink", "answers" : ["drank"] },
-      { "question" : "eat", "answers" : ["ate"] },
-      { "question" : "fall", "answers" : ["fell"] },
+      { "question" : "drink", "answers" : ["drunk"] },
+      { "question" : "eat", "answers" : ["eaten"] },
+      { "question" : "fall", "answers" : ["fallen"] },
       { "question" : "feel", "answers" : ["felt"] },
       { "question" : "find", "answers" : ["found"] },
-      { "question" : "fly", "answers" : ["flew"] },
-      { "question" : "forbid", "answers" : ["forbade"] },
-      { "question" : "forget", "answers" : ["forgot"] },
-      { "question" : "forgive", "answers" : ["forgave"] },
-      { "question" : "get", "answers" : ["got"] },
-      { "question" : "give", "answers" : ["gave"] },
-      { "question" : "go", "answers" : ["went"] },
-      { "question" : "grow", "answers" : ["grew"] },
+      { "question" : "fly", "answers" : ["flown"] },
+      { "question" : "forbid", "answers" : ["forbidden"] },
+      { "question" : "forget", "answers" : ["forgotten"] },
+      { "question" : "forgive", "answers" : ["forgiven"] },
+      { "question" : "get", "answers" : ["gotten"] },
+      { "question" : "give", "answers" : ["given"] },
+      { "question" : "go", "answers" : ["gone"] },
+      { "question" : "grow", "answers" : ["grown"] },
       { "question" : "have", "answers" : ["had"] },
       { "question" : "hear", "answers" : ["heard"] },
-      { "question" : "hide", "answers" : ["hid"] },
+      { "question" : "hide", "answers" : ["hidden"] },
       { "question" : "hold", "answers" : ["held"] },
       { "question" : "keep", "answers" : ["kept"] },
-      { "question" : "know", "answers" : ["knew"] },
+      { "question" : "know", "answers" : ["known"] },
       { "question" : "learn", "answers" : ["learned"] },
       { "question" : "leave", "answers" : ["left"] },
       { "question" : "let", "answers" : ["let"] },
       { "question" : "lose", "answers" : ["lost"] }
+    ]
+  },
+
+
+  {
+    "topic" : "IRREGULAR VERBS / PAST SIMPLE + PARTICIPLE PART 01",
+    "list" : [
+      { "question" : "be", "answers" : ["was, been", "were, been"] },
+      { "question" : "become", "answers" : ["became, become"] },
+      { "question" : "begin", "answers" : ["began, begun"] },
+      { "question" : "bite", "answers" : ["bit, bitten"] },
+      { "question" : "break", "answers" : ["broke, broken"] },
+      { "question" : "bring", "answers" : ["brought, brought"] },
+      { "question" : "build", "answers" : ["built, built"] },
+      { "question" : "buy", "answers" : ["bought, bought"] },
+      { "question" : "choose", "answers" : ["chose, chosen"] },
+      { "question" : "come", "answers" : ["came, come"] },
+      { "question" : "cost", "answers" : ["cost, cost"] },
+      { "question" : "do", "answers" : ["did, done"] },
+      { "question" : "dream", "answers" : ["dreamed, dreamed"] },
+      { "question" : "drink", "answers" : ["drank, drunk"] },
+      { "question" : "eat", "answers" : ["ate, eaten"] },
+      { "question" : "fall", "answers" : ["fell, fallen"] },
+      { "question" : "feel", "answers" : ["felt, felt"] },
+      { "question" : "find", "answers" : ["found, found"] },
+      { "question" : "fly", "answers" : ["flew, flown"] },
+      { "question" : "forbid", "answers" : ["forbade, forbidden"] },
+      { "question" : "forget", "answers" : ["forgot, forgotten"] },
+      { "question" : "forgive", "answers" : ["forgave, forgiven"] },
+      { "question" : "get", "answers" : ["got, got"] },
+      { "question" : "give", "answers" : ["gave, given"] },
+      { "question" : "go", "answers" : ["went, gone, been"] },
+      { "question" : "grow", "answers" : ["grew, grown"] },
+      { "question" : "have", "answers" : ["had, had"] },
+      { "question" : "hear", "answers" : ["heard, heard"] },
+      { "question" : "hide", "answers" : ["hid, hidden"] },
+      { "question" : "hold", "answers" : ["held, held"] },
+      { "question" : "keep", "answers" : ["kept, kept"] },
+      { "question" : "know", "answers" : ["knew, known"] },
+      { "question" : "learn", "answers" : ["learned, learned"] },
+      { "question" : "leave", "answers" : ["left, left"] },
+      { "question" : "let", "answers" : ["let, let"] },
+      { "question" : "lose", "answers" : ["lost, lost"] }
     ]
   },
 
@@ -83,10 +127,26 @@
   },
 
   {
-    "topic" : "VERBS",
+    "topic" : "NEW WORDS",
     "list" : [
-      { "question" : "Questao 01", "answers" : ["xxxx", "xxxxx", "xxxxxx"] },
-      { "question" : "Questao 02", "answers" : ["xxxx", "xxxxx", "xxxxxx", "xxxxxxx"] }
+      { "question" : "ever", "answers" : ["at any time", "alguma vez", "nunca"] },
+      { "question" : "always", "answers" : ["every time", "sempre"] },
+      { "question" : "proud", "answers" : ["satisfied", "orgulhoso"] },
+      { "question" : "brainstorm", "answers" : ["ideas", "ideias"] },
+      { "question" : "xxxxx", "answers" : ["", ""] },
+      { "question" : "xxxxx", "answers" : ["", ""] },
+      { "question" : "xxxxx", "answers" : ["", ""] },
+      { "question" : "xxxxx", "answers" : ["", ""] },
+      { "question" : "xxxxx", "answers" : ["", ""] }
+    ]
+  },
+
+  {
+    "topic" : "TEST",
+    "list" : [
+      { "question" : "become", "answers" : ["became, become"] },
+      { "question" : "break", "answers" : ["broke, broken"] },
+      { "question" : "xxxxx", "answers" : ["", ""] }
     ]
   }
 ]

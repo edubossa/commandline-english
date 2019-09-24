@@ -97,7 +97,7 @@ public class CommandlineInglesApplication  {
         }
         System.out.println(ANSI_RED + "Selecione o numero de um Topico!");
         for (int i = 0; i < topics.size(); i++) {
-            System.out.println(ANSI_GREEN + "[" + i + "] " + topics.get(i).getTopic());
+            System.out.println(ANSI_GREEN + "[" + i + "] " + topics.get(i).getTopic() + " - TOTAL QUESTIONS: " + topics.get(i).getList().size());
         }
 
         String input = new Scanner(System.in).nextLine();
