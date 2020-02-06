@@ -4,6 +4,7 @@ import br.com.commandline.domain.Question;
 import br.com.commandline.domain.Topic;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import org.springframework.util.StringUtils;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -37,6 +38,8 @@ public class CommandlineInglesApplication  {
     static List<Question> listQuestionsTemp = new ArrayList<>();
     static List<Question> listQuestionsError = new ArrayList<>();
 
+    static boolean reverseOrder = false;
+
     static Question getQuestion() {
         finalTopic = false;
         Question question = topic.getList().get(new Random().nextInt(topic.getList().size()));
@@ -63,7 +66,11 @@ public class CommandlineInglesApplication  {
             return;
         }
         System.out.println(ANSI_RESET + "##############################################################");
-        System.out.println(ANSIS[new Random().nextInt(ANSIS.length)] + "Question: " + question.getQuestion());
+        if (reverseOrder) {
+            System.out.println(ANSIS[new Random().nextInt(ANSIS.length)] + "Question: " + question.getAnswers());
+        } else {
+            System.out.println(ANSIS[new Random().nextInt(ANSIS.length)] + "Question: " + question.getQuestion());
+        }
 
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine().trim();
@@ -71,7 +78,12 @@ public class CommandlineInglesApplication  {
         int count = 1;
         while (count < qtdeRetry) {
             String temp = input;
-            String answer = question.getAnswers().stream().filter(p -> temp.equalsIgnoreCase(p.trim())).findAny().orElse("");
+            String answer;
+            if (reverseOrder) {
+                answer =  question.getQuestion().equalsIgnoreCase(temp) ? temp : "";
+            } else {
+                answer = question.getAnswers().stream().filter(p -> temp.equalsIgnoreCase(p.trim())).findAny().orElse("");
+            }
             if (!"".equals(answer)) break;
             System.out.println(ANSI_RED + "Error -> Retry " + count + " of " + qtdeRetry);
             input = scanner.nextLine().trim();
@@ -80,7 +92,11 @@ public class CommandlineInglesApplication  {
             if (count == qtdeRetry) {
                 System.out.println(ANSI_RED + "Error -> Retry " + count + " of " + qtdeRetry);
                 System.out.println();
-                System.out.println(ANSI_RED + "Answer: " + question.getAnswers());
+                if (reverseOrder) {
+                    System.out.println(ANSI_RED + "Answer: " + question.getQuestion());
+                } else {
+                    System.out.println(ANSI_RED + "Answer: " + question.getAnswers());
+                }
                 listQuestionsError.add(question);
             }
         }
@@ -118,6 +134,8 @@ public class CommandlineInglesApplication  {
     }
 
     static void init () throws IOException, URISyntaxException {
+        final String reverse = System.getProperty("reverse");
+        if (!StringUtils.isEmpty(reverse)) reverseOrder = true;
         Gson gson = new Gson();
         InputStream is = CommandlineInglesApplication.class.getResourceAsStream("/question.json");
         BufferedReader br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
